@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.list h3{&#13;
+  border-bottom: 1px solid #ccc;&#13;
+  font-weight: 300;&#13;
+  font-size: 20px;&#13;
+  padding-bottom: 10px&#13;
+}&#13;
+&#13;
+body {&#13;
+  font-family: Arial, sans-serif;&#13;
+  margin: 0;&#13;
+  padding: 0;&#13;
+}&#13;
+&#13;
+.list {&#13;
+  max-width: 600px;&#13;
+  margin: 20px auto;&#13;
+}&#13;
+&#13;
+table {&#13;
+  width: 100%;&#13;
+  &#13;
+  border-collapse: collapse;&#13;
+}&#13;
+&#13;
+th, td {&#13;
+  border: 1px solid #ccc;&#13;
+  padding: 8px;&#13;
+  text-align: center;&#13;
+  font-size: 14px;&#13;
+}&#13;
+&#13;
+td{&#13;
+  cursor: pointer;&#13;
+}&#13;
+&#13;
+thead {&#13;
+  background-color: #f2f2f2;&#13;
+}&#13;
+&#13;
+tr:nth-child(even) {&#13;
+  background-color: #f9f9f9;&#13;
+}&#13;
+&#13;
+tr:hover {&#13;
+  background-color: #f2f2f2;&#13;
+}&#13;
+&#13;
+td[contenteditable="true"] {&#13;
+  background-color: #fff;&#13;
+  cursor: text;&#13;
+}&#13;
+&#13;
+td[contenteditable="true"]:focus {&#13;
+  outline: 1px solid #007bff;&#13;
+}&#13;
+&#13;
+input{&#13;
+   outline: none;&#13;
+ cursor: pointer;&#13;
+ border: none;&#13;
+ padding: 0.9rem 2rem;&#13;
+ margin: 10px;&#13;
+ font-family: inherit;&#13;
+ font-size: inherit;&#13;
+ position: relative;&#13;
+ display: inline-block;&#13;
+ letter-spacing: 0.05rem;&#13;
+ font-weight: 700;&#13;
+ font-size: 17px;&#13;
+ //border-radius: 500px;&#13;
+ overflow: hidden;&#13;
+&#13;
+  width: 200px;&#13;
+  float: right;&#13;
+}&#13;
+&#13;
+&#13;
+&#13;
+.headerDiv{&#13;
+  display: inline-block;&#13;
+  margin-top: 10px;&#13;
+  margin-bottom: 10px;&#13;
+}&#13;
+&#13;
+.DateFilter{&#13;
+  margin-left: 250px;&#13;
+}&#13;
+&#13;
+.approval-buttons {&#13;
+  text-align: center;&#13;
+  margin-left: 190px;&#13;
+  //margin-bottom: 20px;&#13;
+  //margin-top: 20px;&#13;
+  //position: relative;&#13;
+  display: inline-block;&#13;
+}&#13;
+&#13;
+.approve-btn, .reject-btn {&#13;
+  padding: 5px;&#13;
+  margin: 0 10px;&#13;
+  border: none;&#13;
+  border-radius: 5px;&#13;
+  font-size: 14px;&#13;
+  cursor: pointer;&#13;
+}&#13;
+&#13;
+.approve-btn {&#13;
+  background-color: #4CAF50; /* Green */&#13;
+  color: white;&#13;
+}&#13;
+&#13;
+.reject-btn {&#13;
+  background-color: #f44336; /* Red */&#13;
+  color: white;&#13;
+}&#13;
+&#13;
+.approve-btn:hover, .reject-btn:hover {&#13;
+  opacity: 0.8;&#13;
+}&#13;
+&#13;
+&#13;
+/* Style the dropdown button */&#13;
+.dropbtn {&#13;
+  background-color: black;&#13;
+  color: white;&#13;
+  padding: 5px;&#13;
+  font-size: 14px;&#13;
+  border: none;&#13;
+  cursor: pointer;&#13;
+  &#13;
+}&#13;
+&#13;
+/* Dropdown button on hover &amp; focus */&#13;
+.dropbtn:hover, .dropbtn:focus {&#13;
+  background-color: green;&#13;
+}&#13;
+&#13;
+/* The container &lt;div&gt; - needed to position the dropdown content */&#13;
+.dropdown {&#13;
+  position: relative;&#13;
+  display: inline-block;&#13;
+  margin-bottom: 20px;&#13;
+}&#13;
+&#13;
+&#13;
+&#13;
+/* Dropdown content (hidden by default) */&#13;
+.dropdown-content {&#13;
+  //display: none;&#13;
+  position: absolute;&#13;
+  background-color: black;&#13;
+  min-width: 160px;&#13;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);&#13;
+  z-index: 1;&#13;
+}&#13;
+&#13;
+/* Links inside the dropdown */&#13;
+.dropdown-content option {&#13;
+  color: black;&#13;
+  padding: 12px 16px;&#13;
+  text-decoration: none;&#13;
+  display: block;&#13;
+}&#13;
+&#13;
+/* Change color of dropdown links on hover */&#13;
+.dropdown-content option:hover {&#13;
+  background-color: #f1f1f1;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>timesheet_overview</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Timesheet Overview</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-14 15:22:05</sys_created_on>
+        <sys_id>f89559a22f9002108eddfe7cf699b6db</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Timesheet Overview</sys_name>
+        <sys_package display_value="Timesheet Widgets" source="x_1122097_timeshee">7e2391ee2f5002108eddfe7cf699b6e1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Timesheet Widgets">7e2391ee2f5002108eddfe7cf699b6e1</sys_scope>
+        <sys_update_name>sp_widget_f89559a22f9002108eddfe7cf699b6db</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-14 15:28:57</sys_updated_on>
+        <template><![CDATA[<div class="list">
+  <h3>My Timesheet Overview</h3>
+
+  <div class="headerDiv">
+    <div class="dropdown">
+      <select id="dropdown" class="dropdown-content dropbtn">
+        <option>Employee name</option>
+
+      </select>
+
+    </div>
+    <div class="dropdown DateFilter">
+      <select id="dropdown" class="dropdown-content dropbtn " ng-repeat="item in data.weekOptions">
+        <option ng-href="{{item.url}}">{{item.optionText}}</option>
+
+      </select>
+    </div>
+    <div class="approval-buttons">
+      <button class="approve-btn" ng-click="c.approve()">Approve</button>
+      <button class="reject-btn" ng-click="c.reject()">Reject</button>
+    </div>
+
+  </div>
+
+    
+    <table class="list-group">
+
+    <thead>
+      <th>Date</th>
+      <th>Type</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Hours</th>
+    </thead>
+    
+      <tbody>
+        <tr style="{{data.myObjectStyle}}" ng-repeat="item in data.list">
+
+          <td ng-href="{{item.url}}" >
+            {{item.date}}
+          </td>
+          <td ng-href="{{item.url}}">
+            {{item.type}}
+          </td>
+
+          <td  ng-href="{{item.url}}">
+
+            {{item.startTime}}
+
+          </td>
+          <td ng-href="{{item.url}}">
+            {{item.endTime}}
+          </td>
+          <td ng-href="{{item.url}}">
+            {{item.hours}}
+          </td>
+          
+
+      </tbody>
+      <tfoot>
+        <th>Total</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td >{{data.total}}</td>
+      </tfoot>
+  </table>
+</div>]]></template>
+    </sp_widget>
+</record_update>
